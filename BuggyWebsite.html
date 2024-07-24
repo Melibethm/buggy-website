@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buggy Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hidden {
+            display: none;
+        }
+        #welcome-message {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="welcome-message">Welcome to the Buggy Website!</h1>
+    <p>This website is full of bugs. Can you find them all?</p>
+    <button onclick="showHiddenMessage()">Click me for a surprise!</button>
+    <p id="hidden-message" class="hidden">You found me!</p>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function showHiddenMessage() {
+            document.getElementById('hidden-message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
