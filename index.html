@@ -13,24 +13,43 @@
             display: none;
         }
         #welcome-message {
-            color: blue;
+            color: bule; /* Incorrect color name */
+        }
+        .container {
+            width: 90%; /* Add a container with improper width */
+            margin: auto;
+        }
+        img {
+            width: 100%; /* Images will stretch out of proportion */
         }
     </style>
 </head>
 <body>
-    <h1 id="welcome-message">Welcome to the Buggy Website!</h1>
-    <p>This website is full of bugs. Can you find them all?</p>
-    <button onclick="showHiddenMessage()">Click me for a surprise!</button>
-    <p id="hidden-message" class="hidden">You found me!</p>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="Text"><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="container">
+        <h1 id="welcome-message">Welcome to the Buggy Website!</h1>
+        <p>This website is full of bugs. Can you find them all?</p>
+        <button onclick="showHiddenMessage()">Click me for a surprise!</button>
+        <p id="hidden-message" class="hidden">You found me!</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br>
+            <label for="age">Age:</label> <!-- Missing input field for age -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
     <script>
         function showHiddenMessage() {
+            document.getElementById('hidden-message').classList.remove('hidden');
+        }
+
+        // Add a script with an error
+        document.getElementById('welcome-message').style.color = 'green'; // This line conflicts with CSS
+        console.log("Page loaded.);
+
+        // Misnamed function
+        function showHidenMessage() {
             document.getElementById('hidden-message').classList.remove('hidden');
         }
     </script>
